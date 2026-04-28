@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartReader</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- Main page content -->
+  <div class="hero">
+    <h1>📘 SmartReader</h1>
+    <p>Upload a PDF and chat with it instantly</p>
+  </div>
+
+  <!-- Floating chat button -->
+  <button class="chat-fab" id="chatToggle">💬</button>
+
+  <!-- Chat widget -->
+  <div class="chat-widget" id="chatWidget">
+    <div class="chat-header">
+      <span>📘 SmartReader</span>
+      <button class="close-btn" id="closeChat">✕</button>
+    </div>
+
+    <!-- Upload section -->
+    <div class="upload-section" id="uploadSection">
+      <p id="uploadStatus">Upload a PDF to get started</p>
+      <label class="upload-label" for="pdfInput">📎 Choose PDF</label>
+      <input type="file" id="pdfInput" accept=".pdf" hidden />
+      <div class="upload-progress" id="uploadProgress"></div>
+    </div>
+
+    <!-- Messages -->
+    <div class="chat-messages" id="chatMessages"></div>
+
+    <!-- Input -->
+    <div class="chat-input-row">
+      <input
+        type="text"
+        id="userInput"
+        placeholder="Ask something about your PDF..."
+        disabled
+      />
+      <button id="sendBtn" disabled>➤</button>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
